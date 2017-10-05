@@ -13,6 +13,8 @@
 		3C1207AE1F868D9E00A1451D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C1207AC1F868D9E00A1451D /* LaunchScreen.storyboard */; };
 		3C985A481F8692FB00505FC3 /* Survey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C985A471F8692FB00505FC3 /* Survey.swift */; };
 		3C985A4A1F869E4F00505FC3 /* EmojiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C985A491F869E4F00505FC3 /* EmojiController.swift */; };
+		3C9982A11F86C0B700357F4D /* SurveyListsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9982A01F86C0B700357F4D /* SurveyListsTableViewController.swift */; };
+		3C9982A31F86C0F000357F4D /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9982A21F86C0F000357F4D /* SurveyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		3C1207AF1F868D9E00A1451D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C985A471F8692FB00505FC3 /* Survey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Survey.swift; sourceTree = "<group>"; };
 		3C985A491F869E4F00505FC3 /* EmojiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiController.swift; sourceTree = "<group>"; };
+		3C9982A01F86C0B700357F4D /* SurveyListsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyListsTableViewController.swift; sourceTree = "<group>"; };
+		3C9982A21F86C0F000357F4D /* SurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,8 @@
 		3C1207B81F86925E00A1451D /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				3C9982A01F86C0B700357F4D /* SurveyListsTableViewController.swift */,
+				3C9982A21F86C0F000357F4D /* SurveyViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -182,6 +188,8 @@
 				3C1207A41F868D9E00A1451D /* AppDelegate.swift in Sources */,
 				3C985A481F8692FB00505FC3 /* Survey.swift in Sources */,
 				3C985A4A1F869E4F00505FC3 /* EmojiController.swift in Sources */,
+				3C9982A11F86C0B700357F4D /* SurveyListsTableViewController.swift in Sources */,
+				3C9982A31F86C0F000357F4D /* SurveyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

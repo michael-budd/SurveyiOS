@@ -29,7 +29,7 @@ class SurveyController {
         guard let url = baseURL else { fatalError("Bad URL")}
         
         //MARK: - Build url
-        let requestUrl = url.appendingPathExtension("json")
+        let requestUrl = url.appendingPathComponent(survey.identifier.uuidString).appendingPathExtension("json")
         
         var request = URLRequest(url: requestUrl)
         request.httpMethod = "PUT"
@@ -55,33 +55,33 @@ class SurveyController {
         }.resume()
     }
     
-    func fetchEmoji(completion: @escaping ([Survey]?) -> Void) {
+    func fetchEmoji(completion: @escaping () -> Void) {
         
         guard let url = baseURL?.appendingPathExtension("json") else {
             print("Bad base url")
-            completion([])
+            completion()
             return 
         }
         
         URLSession.shared.dataTask(with: url) { (data, _, error) in
             if let error = error {
                 NSLog("Error \(error): \(error.localizedDescription)")
-                completion([])
+                completion()
                 return
                 }
             guard let data = data else {
                 print("No data returned from dataTask")
-                completion([])
+                completion()
                 return
                 }
             guard let surveyDictionaries = (try? JSONSerialization.jsonObject(with: data, options: []) as? [String: [String: Any]]) else {
                 print("Fetching from JSON oject")
-                completion([])
+                completion()
                 return
             }
             guard let surveys = surveyDictionaries?.flatMap( { Survey(dictionary: $0.value, identifier: $0.key) }) else { return }
             self.surveys = surveys
-            completion(surveys)
+            completion()
             }.resume()
         }
     
